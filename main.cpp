@@ -110,5 +110,38 @@ int main()
         cout<<endl;
     }
 
+    cout<<endl<<endl;
+
+    cout << "3. Develop a program that fills a 5 x 5 matrix (using random selection) and then identifies the largest element of the matrix. Display the result."<<endl;
+
+    matrixSizeX = 5;
+    matrixSizeY = 5;
+    int matrix3[matrixSizeX][matrixSizeY], largerst = 0;
+
+    srand(time(0));
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix3[i][j]=rand()%20;
+            if (matrix3[i][j] > largerst)
+                largerst = matrix3[i][j];
+        }        
+    }
+
+    cout<<endl<<"Matrix:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix3[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"Matrix largest element is:"<<largerst<<endl;
+
     return 0;
 }
