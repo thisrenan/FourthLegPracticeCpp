@@ -11,7 +11,7 @@ int main()
 
     int matrixSizeX = 5, matrixSizeY = 5;
     int matrix1[matrixSizeX][matrixSizeY], sum = 0;
-    srand(time(NULL));
+    srand(time(0));
 
     for (int i = 0; i < matrixSizeX; i++)
     {
@@ -34,7 +34,81 @@ int main()
     cout<<endl<<"The sum of this matrix is: "<<sum;
 
     cout<<endl<<endl;
+
+    cout << "2. Write an algorithm that performs the following tasks with 3 x 5 matrices of integers:"<<endl
+         << "a. Read a matrix A."<<endl
+         << "b. Read a matrix B."<<endl
+         << "c. Generate a matrix C with the sum of the elements of matrix A and B."<<endl
+         << "d. Show all the elements of row 2 of matrix C."<<endl
+         << "e. Show all the elements of column 3 of matrix C."<<endl;
+
+    matrixSizeX = 3;
+    matrixSizeY = 5;
+    int matrix2A[matrixSizeX][matrixSizeY], matrix2B[matrixSizeX][matrixSizeY], matrix2C[matrixSizeX][matrixSizeY];
+
+    srand(time(0));
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix2A[i][j]=rand()%20;
+            matrix2B[i][j]=rand()%20;
+        }        
+    }
+
+    cout<<endl<<"Matrix A:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix2A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"Matrix B:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix2B[i][j]<<" ";
+        }
+        cout<<endl;
+    }
         
+    for (int i = 0; i < matrixSizeX; i++)
+        for (int j = 0; j < matrixSizeY; j++)
+            matrix2C[i][j] = matrix2A[i][j] + matrix2B[i][j];
+
+    cout<<endl<<"Matrix C:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix2C[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"Matrix C row 2:"<<endl;
+
+
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix2C[2][j]<<" ";
+        }
+
+    cout<<endl<<endl<<"Matrix C column 3:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {        
+        cout<<matrix2C[i][3]<<" ";        
+        cout<<endl;
+    }
 
     return 0;
 }
