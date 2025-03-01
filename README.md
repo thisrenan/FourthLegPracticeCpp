@@ -25,3 +25,5 @@ Lets practice what we have been studying.
 3. Develop a program that fills a 5 x 5 matrix (using random selection) and then identifies the largest element of the matrix. Display the result.
 
 4. Write a program that reads a 4 x 4 matrix and then adds up all the elements contained in the main diagonal. Display the result.
+
+5. Write a program that reads a 4 x 4 matrix and then adds all the elements contained in the secondary diagonal. Display the result.
