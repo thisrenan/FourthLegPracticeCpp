@@ -205,5 +205,57 @@ int main()
 
     cout<<endl<<"The sum of the value of the elements in the main diagonal is: "<<sum<<"."<<endl;
 
+    cout<<endl<<endl;
+
+    cout<<"6. Write a program that fills a 5x5 matrix using random numbers. Then create two vectors and place, in one, the sum of the matrix rows, and in the other the sum of the matrix columns. Display the result."<<endl;
+
+    matrixSizeX = 5;
+    matrixSizeY = 5;
+    int matrix6[matrixSizeX][matrixSizeY];
+    int vector6rows[matrixSizeY], vector6column[matrixSizeX];
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        vector6rows[i] = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix6[i][j]=rand()%20;
+            vector6rows[i] += matrix6[i][j];
+        }        
+    }  
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        vector6column[i] = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            vector6column[i] += matrix6[j][i];
+        }        
+    }      
+
+    cout<<endl<<"Matrix:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix6[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"VectorRows: "<<endl;
+    for (int i = 0; i < matrixSizeY; i++)
+    {
+        cout<<vector6rows[i]<<" ";
+    }
+
+    cout<<endl<<"VectorColumns: "<<endl;
+    for (int i = 0; i < matrixSizeY; i++)
+    {
+        cout<<vector6column[i]<<" ";
+    }
+    
+
     return 0;
 }
