@@ -141,7 +141,37 @@ int main()
         cout<<endl;
     }
 
-    cout<<endl<<"Matrix largest element is:"<<largerst<<endl;
+    cout<<endl<<"Matrix largest element is: "<<largerst<<endl;
+
+    cout<<endl<<"Write a program that reads a 4 x 4 matrix and then adds up all the elements contained in the main diagonal. Display the result."<<endl;
+
+    matrixSizeX = 4;
+    matrixSizeY = 4;
+    int matrix4[matrixSizeX][matrixSizeY];
+    sum = 0;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix4[i][j]=rand()%20;
+            if (i == j)
+                sum += matrix4[i][j];
+        }        
+    }    
+
+    cout<<endl<<"Matrix:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix4[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"The sum of the value of the elements in the main diagonal is: "<<sum<<"."<<endl;
 
     return 0;
 }
