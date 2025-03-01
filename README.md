@@ -27,3 +27,8 @@ Lets practice what we have been studying.
 4. Write a program that reads a 4 x 4 matrix and then adds up all the elements contained in the main diagonal. Display the result.
 
 5. Write a program that reads a 4 x 4 matrix and then adds all the elements contained in the secondary diagonal. Display the result.
+
+6. Write a program that fills a 5x5 matrix using random numbers. Then create two vectors and place, in one, the sum of the matrix rows, and in the other the sum of the matrix columns. Display the result.
+   
+![image](https://github.com/user-attachments/assets/f1986873-46f2-453a-ab5c-42d40dd63e3a)
+
