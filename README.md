@@ -23,3 +23,5 @@ Lets practice what we have been studying.
    e. Show all the elements of column 3 of matrix C.
 
 3. Develop a program that fills a 5 x 5 matrix (using random selection) and then identifies the largest element of the matrix. Display the result.
+
+4. Write a program that reads a 4 x 4 matrix and then adds up all the elements contained in the main diagonal. Display the result.
