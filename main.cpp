@@ -255,7 +255,59 @@ int main()
     {
         cout<<vector6column[i]<<" ";
     }
+
+    cout<<endl<<endl;
+
+    cout<<"7. Develop an algorithm that reads a set of integers that will be stored in a matrix A with dimensions 10x10. From matrix A, the program must generate a vector with the largest elements of each row and another vector with the smallest elements of each column."<<endl;
+
+    matrixSizeX = 10;
+    matrixSizeY = 10;
+    int matrix7[matrixSizeX][matrixSizeY];
+    int vector7rows[matrixSizeY], vector7column[matrixSizeX];
     
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        vector7rows[i] = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix7[i][j]=rand()%20;
+            if (matrix7[i][j] > vector7rows[i])
+                vector7rows[i] = matrix7[i][j];
+        }        
+    }  
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        vector7column[i] = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            if (matrix7[j][i] > vector7column[i])
+                vector7column[i] = matrix7[j][i];
+        }        
+    }      
+
+    cout<<endl<<"Matrix:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix7[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"VectorRows: "<<endl;
+    for (int i = 0; i < matrixSizeY; i++)
+    {
+        cout<<vector7rows[i]<<" ";
+    }
+
+    cout<<endl<<"VectorColumns: "<<endl;
+    for (int i = 0; i < matrixSizeY; i++)
+    {
+        cout<<vector7column[i]<<" ";
+    }
 
     return 0;
 }
