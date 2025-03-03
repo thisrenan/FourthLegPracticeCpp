@@ -32,3 +32,5 @@ Lets practice what we have been studying.
    
 ![image](https://github.com/user-attachments/assets/f1986873-46f2-453a-ab5c-42d40dd63e3a)
 
+7. Develop an algorithm that reads a set of integers that will be stored in a matrix A with dimensions 10x10. From matrix A, the program must generate a vector with the largest elements of each row and another vector with the smallest elements of each column.
+
