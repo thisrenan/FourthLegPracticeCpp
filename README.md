@@ -36,3 +36,10 @@ Lets practice what we have been studying.
 
 8. Create an algorithm that fills a 20 x 20 matrix of real numbers and adds each of the rows, storing the result of the sum in a vector. Then, multiply each element of the matrix by the sum of its row, and place it in a second matrix of the same size. Show the resulting matrix.
 
+9. Create an algorithm that reads two square matrices X and Y, with order 5, and performs the following manipulations:
+
+   a. Generate a matrix W with the smallest elements between matrices X and Y, that is, an element Wij has the smallest value between elements Xij and Yij. If the elements are equal, both are the smallest value.
+
+   b. Generate a vector with the elements of the main diagonal of matrix X;
+
+   c. Find the column of matrix Y that has the smallest sum of the values ​​of its elements among all the columns of the matrix, and show the position of this column. If there are equal column sums, consider the first column with the occurrence of the value.
