@@ -1,6 +1,6 @@
 # FourthLegPracticeCpp
 
-This list of exercises refers to C++ programming studies and corresponds to the first part of the study.
+This list of exercises refers to C++ programming studies and corresponds to the fourth part of the study.
 
 The list involves matrix manipulation and programming logic.
 
