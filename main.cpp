@@ -309,5 +309,56 @@ int main()
         cout<<vector7column[i]<<" ";
     }
 
+    cout<<endl<<endl;
+
+    cout<<"8. Create an algorithm that fills a 20 x 20 matrix of real numbers and adds each of the rows, storing the result of the sum in a vector. Then, multiply each element of the matrix by the sum of its row, and place it in a second matrix of the same size. Show the resulting matrix."<<endl;
+
+    matrixSizeX = 20;
+    matrixSizeY = 20;
+    int matrix8A[matrixSizeX][matrixSizeY], matrix8B[matrixSizeX][matrixSizeY];
+    int vector8rows[matrixSizeY];
+    
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        vector8rows[i] = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            matrix8A[i][j]=rand()%20;
+            vector8rows[i] += matrix8A[i][j];
+        }        
+    }  
+
+    for (int i = 0; i < matrixSizeX; i++)    
+        for (int j = 0; j < matrixSizeY; j++)        
+            matrix8B[i][j]=matrix8A[i][j]*vector8rows[i];
+
+    cout<<endl<<"MatrixA:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix8A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"VectorRows: "<<endl;
+    for (int i = 0; i < matrixSizeY; i++)
+    {
+        cout<<vector8rows[i]<<" ";
+    }
+
+    cout<<endl<<"MatrixB:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix8B[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
     return 0;
 }
