@@ -34,3 +34,5 @@ Lets practice what we have been studying.
 
 7. Develop an algorithm that reads a set of integers that will be stored in a matrix A with dimensions 10x10. From matrix A, the program must generate a vector with the largest elements of each row and another vector with the smallest elements of each column.
 
+8. Create an algorithm that fills a 20 x 20 matrix of real numbers and adds each of the rows, storing the result of the sum in a vector. Then, multiply each element of the matrix by the sum of its row, and place it in a second matrix of the same size. Show the resulting matrix.
+
