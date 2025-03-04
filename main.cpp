@@ -359,6 +359,67 @@ int main()
         }
         cout<<endl;
     }
+    
+    cout<<endl<<endl;
+
+    cout << "9. Create an algorithm that reads two square matrices X and Y, with order 5, and performs the following manipulations:"<<endl
+         << "a. Generate a matrix W with the smallest elements between matrices X and Y, that is, an element Wij has the smallest value between elements Xij and Yij. If the elements are equal, both are the smallest value."<<endl
+         << "b. Generate a vector with the elements of the main diagonal of matrix X."<<endl
+         << "c. Find the column of matrix Y that has the smallest sum of the values of its elements among all the columns of the matrix, and show the position of this column. If there are equal column sums, consider the first column with the occurrence of the value."<<endl;
+
+    matrixSizeX = 5;
+    matrixSizeY = 5;
+    int matrix9X[matrixSizeX][matrixSizeY], matrix9Y[matrixSizeX][matrixSizeY], matrix9W[matrixSizeX][matrixSizeY];
+
+    for (int i = 0; i < matrixSizeX; i++)
+        for (int j = 0; j < matrixSizeY; j++)
+            matrix9X[i][j]=rand()%20;
+
+    for (int i = 0; i < matrixSizeX; i++)
+        for (int j = 0; j < matrixSizeY; j++)
+            matrix9Y[i][j]=rand()%20;    
+
+    for (int i = 0; i < matrixSizeX; i++)
+        for (int j = 0; j < matrixSizeY; j++)
+            if (matrix9X[i][j] <= matrix9Y[i][j])
+                matrix9W[i][j] = matrix9X[i][j];
+            else
+                matrix9W[i][j] = matrix9Y[i][j];
+
+    
+    cout<<endl<<"MatrixX:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix9X[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"MatrixY:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix9Y[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl<<"MatrixW:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        for (int j = 0; j < matrixSizeY; j++)
+        {
+            cout<<matrix9W[i][j]<<" ";
+        }
+        cout<<endl;
+    }    
+    
 
     return 0;
 }
