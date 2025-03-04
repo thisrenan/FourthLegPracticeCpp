@@ -370,10 +370,17 @@ int main()
     matrixSizeX = 5;
     matrixSizeY = 5;
     int matrix9X[matrixSizeX][matrixSizeY], matrix9Y[matrixSizeX][matrixSizeY], matrix9W[matrixSizeX][matrixSizeY];
+    int vector[matrixSizeX];
 
     for (int i = 0; i < matrixSizeX; i++)
+    {
         for (int j = 0; j < matrixSizeY; j++)
+        {
             matrix9X[i][j]=rand()%20;
+            if (i == j)
+                vector[i] = matrix9X[i][j];
+        }
+    }
 
     for (int i = 0; i < matrixSizeX; i++)
         for (int j = 0; j < matrixSizeY; j++)
@@ -419,6 +426,13 @@ int main()
         }
         cout<<endl;
     }    
+
+    cout<<endl<<"Vector:"<<endl;
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        cout<<vector[i]<<" ";
+    }
     
 
     return 0;
