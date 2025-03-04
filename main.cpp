@@ -371,6 +371,7 @@ int main()
     matrixSizeY = 5;
     int matrix9X[matrixSizeX][matrixSizeY], matrix9Y[matrixSizeX][matrixSizeY], matrix9W[matrixSizeX][matrixSizeY];
     int vector[matrixSizeX];
+    int columnSmallestSum, auxSum, totalSumSmallestSum = 0;
 
     for (int i = 0; i < matrixSizeX; i++)
     {
@@ -384,7 +385,7 @@ int main()
 
     for (int i = 0; i < matrixSizeX; i++)
         for (int j = 0; j < matrixSizeY; j++)
-            matrix9Y[i][j]=rand()%20;    
+            matrix9Y[i][j]=rand()%20;
 
     for (int i = 0; i < matrixSizeX; i++)
         for (int j = 0; j < matrixSizeY; j++)
@@ -433,7 +434,30 @@ int main()
     {
         cout<<vector[i]<<" ";
     }
+
+    for (int i = 0; i < matrixSizeX; i++)
+    {
+        columnSmallestSum = 0;
+        auxSum = 0;
+        for (int j = 0; j < matrixSizeY; j++)
+            auxSum += matrix9Y[j][i];            
+
+        if (totalSumSmallestSum == 0)
+        {
+            columnSmallestSum = i;
+            totalSumSmallestSum = auxSum;
+        }
+        else
+        {
+            if (auxSum < totalSumSmallestSum)
+            {
+                columnSmallestSum = i;
+                totalSumSmallestSum = auxSum;
+            }
+        }    
+    }
     
+    cout<<endl<<"The column with the smallest sum is the column:"<<columnSmallestSum<<" with an total value: "<<totalSumSmallestSum;
 
     return 0;
 }
